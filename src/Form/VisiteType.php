@@ -30,6 +30,12 @@ class VisiteType extends AbstractType
             ->add('tempmax', null, [
                 'label' => 't° max'
             ])
+            ->add('environnements', EntityType::class, [
+                'class' => Environnement::class,
+                'choice_label' => 'nom',
+                'multiple' => true,
+                'required' => false
+            ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Enregistrer'
             ])
