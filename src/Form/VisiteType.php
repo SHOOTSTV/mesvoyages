@@ -22,7 +22,12 @@ class VisiteType extends AbstractType
             ->add('datecreation', null, [
                 'label' => 'date de création'
             ])
-            ->add('note')
+            ->add('note', IntegerType::class, [
+                'attr' => [
+                    'min' => 0,
+                    'max' => 20
+                ]
+            ])
             ->add('avis')
             ->add('tempmin', null, [
                 'label' => 't° min'
